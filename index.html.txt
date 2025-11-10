@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunny | Advanced Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg, #1e1e2f, #29294d, #1e1e2f);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background Circles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3), transparent);
+            animation: float 10s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-50px); }
+            100% { transform: translateY(0); }
+        }
+
+        .circle.c1 { width: 200px; height: 200px; top: 10%; left: 5%; }
+        .circle.c2 { width: 300px; height: 300px; top: 60%; right: 10%; animation-duration: 12s; }
+        .circle.c3 { width: 150px; height: 150px; bottom: 5%; left: 40%; animation-duration: 8s; }
+
+        /* Card */
+        .card {
+            width: 90%;
+            max-width: 480px;
+            margin: 120px auto;
+            padding: 30px;
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+            text-align: center;
+        }
+
+        .card img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.5);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        p {
+            opacity: 0.85;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        /* Neon Buttons */
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            background: linear-gradient(135deg, #ff6ec4, #7873f5);
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 0 20px rgba(255, 110, 196, 0.4);
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 30px rgba(255, 110, 196, 0.7);
+            transform: translateY(-4px);
+        }
+
+        /* Skills Section */
+        .skills {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .skills h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .skill-item {
+            margin-bottom: 12px;
+        }
+
+        .bar {
+            height: 10px;
+            width: 100%;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+            width: var(--level);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Background -->
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+
+    <!-- Advanced Profile Card -->
+    <div class="card">
+        <img src="https://ibb.co/1f1xCFmK" alt="Profile Photo" />
+        <h1>Sunny Kota</h1>
+        <p>Frontend Developer<br>Iam doing Frontend developer internship from ALFIDO TECH.</p>
+
+        
+        <div class="skills">
+            <h2>Skills</h2>
+
+            <div class="skill-item">HTML
+                <div class="bar"><div class="bar-fill" style="--level: 95%"></div></div>
+            </div>
+
+            <div class="skill-item">CSS
+                <div class="bar"><div class="bar-fill" style="--level: 90%"></div></div>
+            </div>
+
+            <div class="skill-item">JavaScript
+                <div class="bar"><div class="bar-fill" style="--level: 85%"></div></div>
+            </div>
+
+            <div class="skill-item">React
+                <div class="bar"><div class="bar-fill" style="--level: 75%"></div></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
